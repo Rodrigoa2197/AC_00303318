@@ -16,13 +16,13 @@
 ;Luego, mover a los siguientes registros los códigos ASCII de los caracteres guardados en 200h (75%):
 
 ;Copiar el valor de 200h a AX usando direccionamiento directo.
-mov Al, [200h]
+mov [200h], AX
 ;Copiar el valor de 201h a CX usando direccionamiento indirecto por registro.
 mov BX, 201h
 mov CX, [BX]
 ;Copiar el valor de 202h a DX usando direccionamiento indirecto base más índice.
-MOV SI, 1h
-mov DI, [BX + SI]
+mov SI, 1h
+mov DX, [BX + SI]
 ;Copiar el valor de 203h a DI usando direccionamiento relativo por registro.
 mov DI, [BX + 2h]
 	int	20h
